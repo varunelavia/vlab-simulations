@@ -29,3 +29,11 @@ The structure  contains three parts, viz graphs, animation and calculations.
 - When the *updategraph* function is called, it remove all the points from the animation and  graph point arrays, then it will recalculate these points with the new user inputs. This new calculated points are pushed into the animation and graph point arrays and the graph is updated.
 - This *updategraph* function will also have configuration of the graph.
 - There will be one file named sim.js, this file will contain all the static variables whose values will be needed in the calculations, this file will contain a function named *display*, This *display* function is called each time when the user input value changes. This function takes the user input values into local variables, by using these variables and performing mathematical operations on them we get the desired output, then the output is displayed into the *div* having id as *commentboxleft* and/or *commentboxright*.
+- This *display* function will also perform the animation.
+- When the *display* function is called it requests an animation frame.
+- There is a function named *drawRectangle* or *drawAnimation*, this function will draw the animation in the canvas by using the variables of an object named *myRectangle*.
+- There is also one function named *animate* which will call the *drawRectangle* or *drawAnimation* function and update the variables of myRectangle object.
+- Variables of the myRectangle object are updated by the animation points array, which is made by *updategraph* function.
+- This *animate* function will clear the canvas before drawing of the new animation screen, and is set to be called continuously for infinite time.
+- This sim.js file will also contain JavaScript code for the scaling factor which is explain later in this documentation.
+- This sim.js file also handles all the change in the user inputs, This file calls *display* function on the change of any of the user inputs, this file also contains all the mouseover and/or mouseleave event handling functions and work accordingly. This file also handles click event of the controlling buttons, and perform the required actions.
