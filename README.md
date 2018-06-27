@@ -42,7 +42,7 @@ The structure  contains three parts, viz graphs, animation and calculations.
 - This sim.js file also handles all the change in the user inputs, This file calls *display* function on the change of any of the user inputs, this file also contains all the mouseover and/or mouseleave event handling functions and work accordingly. This file also handles click event of the controlling buttons, and perform the required actions.
 - This file also control the toggling of animation and graph by performing show and hide operations.
 ## Working of scaling factor
-- Let us assume that we want to scale the radius, Let's assume that we can show minimum radius 20 and maximum radius 160, Hence 160 - 20 equals to 140, so the range to display the radius is 140 and now we will use the following piece of code to scale a radius.The value we get at end will be used in simulation.
+- Let us assume that we want to scale the radius, Let's assume that we can show minimum radius 20 and maximum radius 160, Hence 160 - 20 equals to 140, so the range to display the radius is 140 and now we will use the following piece of code to scale a radius. The value we get at end will be used in simulation.
 ```javascript
 var tempradius = parseInt(radius);
       var scalingfactor = tempradius/140;
@@ -56,3 +56,6 @@ var tempradius = parseInt(radius);
       tempradius = remainder;
       document.getElementById("radiusscalingfactor").innerHTML = "Radius Scaling Factor - 1:"+Math.ceil(scalingfactor);
 ```
+## Working of animation
+- The sim.js file contains a function called *animate*, this function is set to call for infinite amount of time. This *animate* function first clear the previous animation screen and then updates the parameters of myRectangle object which are used for the animation and then draws the animation screen with the updated values.
+- You can check the example [Here](https://www.html5canvastutorials.com/advanced/html5-canvas-oscillation-animation/).
