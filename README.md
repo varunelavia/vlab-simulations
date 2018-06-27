@@ -41,3 +41,5 @@ The structure  contains three parts, viz graphs, animation and calculations.
 - This sim.js file will also contain JavaScript code for the scaling factor which is explain later in this documentation.
 - This sim.js file also handles all the change in the user inputs, This file calls *display* function on the change of any of the user inputs, this file also contains all the mouseover and/or mouseleave event handling functions and work accordingly. This file also handles click event of the controlling buttons, and perform the required actions.
 - This file also control the toggling of animation and graph by performing show and hide operations.
+## Working of scaling factor
+- Let us assume that we want to scale the radius, Let's assume that we can show minimum radius 20 and maximum radius 160, Hence 160 - 20 equals to 140, so the range to display the radius is 140 and now we will use the following piece of code to scale a radius.
