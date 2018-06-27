@@ -1,0 +1,40 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Virtual Labs - NITK</title>
+<link rel="stylesheet" href="sins/MOMstyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
+<script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+<body onload="editcss(); startsim(); varinit();">
+<noscript>
+The simulation requires JavaScript to be enabled.
+</noscript>
+<div id="container">
+<div id="simtitle" style="font-size:33px;"> Name of Practical</div> 
+<p style="position:absolute;top:435px;left:350px;font-size:20px;" id="lengthscalingfactor"></p>
+<p style="position:absolute;top:455px;left:350px;font-size:20px;" id="massscalingfactor"></p>
+<div style="width:520px;position:absolute;top:95px;left:30px;" id="graphcanvasid">
+  <canvas id="displacementcurvescreen"width="500" height="300"></canvas>
+</div>
+<div style="width:320px;position:absolute;top:95px;left:0px;" id="animationcanvasid">
+</div>
+<canvas id="animationscreen" width="1000" height="2000"></canvas>
+<div id="commentboxleft"></div>
+<div id="commentboxright" style="font-size:15px;"></div>
+<div id="vartitle">VARIABLES</div>
+<div id="variables">
+</div>
+<div id="ctrltitle">CONTROLS</div>
+<div id="controls">
+  <img src="sins/bluefwddulls.png" id="graphbutton" style="position:relative;left:20px;top:10px;cursor:pointer;">    
+</div>
+<div id="copyright" title="Developer : Varun Elavia"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
+</div>
+<script type="text/javascript" src= "sins/chart.js"></script>
+<script type="text/javascript" src= "sins/sim.js"></script>
+</body>
+</html>
