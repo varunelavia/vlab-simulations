@@ -61,3 +61,10 @@ var tempradius = parseInt(radius);
 - You can check the example [Here](https://www.html5canvastutorials.com/advanced/html5-canvas-oscillation-animation/).
 ## Working of graphs
 -  Graph is plotted by using chart.js library. The chart.js file contains *updategraph* function, this function is called each time when the user input values changes, this function is called by the *display* function written in sim.js file. When this function is called, the graph and animation array are emptied first, then the new animation and graph points are calculated using the equation, the inputs of that equation are passed as a parameter to the function, the newly calculated values are then push into the arrays of graph and animation and then the new graph is plotted.
+- You can check the example [Here](https://www.chartjs.org/samples/latest/charts/line/basic.html "Here").
+## References
+- To learn HTML, click [Here](https://www.w3schools.com/html/default.asp "Here") .
+- To learn Javascript, click [Here](https://www.w3schools.com/js/default.asp "Here").
+- To learn JQuery, click [Here](https://www.w3schools.com/jquery/default.asp "Here").
+- To view basic line chart example, click [Here](https://www.chartjs.org/samples/latest/charts/line/basic.html "Here").
+- To get example of animation, click [Here](https://www.html5canvastutorials.com/advanced/html5-canvas-oscillation-animation/ "Here").
