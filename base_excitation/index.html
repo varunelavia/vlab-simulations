@@ -1,0 +1,61 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Virtual Labs - NITK</title>
+<link rel="stylesheet" href="sins/MOMstyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
+<script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+<body onload="editcss(); startsim(); varinit();">
+<noscript>
+The simulation requires JavaScript to be enabled.
+</noscript>
+<div id="container">
+<div id="simtitle" style="font-size:33px;">BASE EXCITATION</div>
+<div style="width: 300px;position: absolute;left: 250px;top: 100px;">
+
+  <canvas id="transmissibilityscreen" width="300" height="170"></canvas>
+  <canvas id="phaseanglescreen"width="300" height="170"></canvas>
+  <canvas id="outputscreen" width="300" height="170"></canvas>
+  <canvas id="inputscreen" width="300" height="170"></canvas>
+</div>
+  <canvas id="animationscreen" width="300" height="1000" style="position: absolute;top:100px;"></canvas>
+<div id="commentboxleft"></div>
+<div id="commentboxright" style="font-size:15px;"></div>
+<div id="vartitle">VARIABLES</div>
+<div id="variables">
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">Stiffness (N/mm)</label>
+  <input type="number" id = "nstiffness" style="width:45px;position:relative;top:15px;left:5px;" value="20" min="0" max="200">
+  <br>
+  <input type="range" id="sstiffness" name="points" min="0" max="200" step="5" value="20" style="width:160px;position:relative;top:15px;left:10px;">  
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">Mass (Kg)</label>
+  <input type="number" id = "nmass" style="width:40px;position:relative;top:15px;left:5px;" value="32" min="0" max="200">
+  <br>
+  <input type="range" id="smass" name="points" min="0" max="200" step="5" value="32" style="width:160px;position:relative;top:15px;left:10px;">  
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">Damping Ratio</label>
+  <input type="number" id = "ndampingratio" style="width:50px;position:relative;top:15px;left:5px;" value="0.07" min="0" max="1" step="0.01">
+  <br>
+  <input type="range" id="sdampingratio" name="points" min="0" max="1" step="0.01" value="0.07" style="width:160px;position:relative;top:15px;left:10px;">  
+  <br>
+  <label style="width:100px;position:relative;top:25px;left:10px;font-size:15px;">Excitation Magnitude y (mm)</label>
+  <input type="number" id = "excitationmagnitude" style="width:50px;position:relative;top:25px;left:10px;" value="20">
+  <br>
+  <label style="width:100px;position:relative;top:35px;left:10px;font-size:15px;">Excitaion Frequency w. (rad/sec)</label>
+  <input type="number" id = "excitationfrequency" style="width:50px;position:relative;top:35px;left:10px;" value="50">
+  <br>
+  </div>
+<div id="ctrltitle">CONTROLS</div>
+<div id="controls">
+  <img src="sins/bluefwddulls.png" id="graphbutton" style="position:relative;left:20px;top:10px;cursor:pointer;">    
+</div>
+<div id="copyright" title="Developer : Varun Elavia"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
+</div>
+<script type="text/javascript" src= "sins/chart.js"></script>
+<script type="text/javascript" src= "sins/sim.js"></script>
+</body>
+</html>

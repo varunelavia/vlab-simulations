@@ -1,0 +1,93 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Simply Supported Beam - Virtual Labs - NITK</title>
+<link rel="stylesheet" href="sins/MOMstyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
+<script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+<body onload="editcss(); startsim(); varinit();">
+<noscript>
+The simulation requires JavaScript to be enabled.
+</noscript>
+<div id="container">
+<div id="simtitle" style="font-size:33px;">SINGLE DEGREE OF FREEDOM SYSTEM</div>
+<div style="width:320px;position:absolute;top:250px;left:25px;" id="graphcanvasid">
+  <canvas id="graphscreen"></canvas>
+</div>
+<div style="width:320px;position:absolute;top:50px;left:-10px;" id="animationcanvasid">
+  <canvas id="simscreen" width="578" height="500"></canvas>
+</div>
+<img src="sins/img1.png" style="width:120px;height:120px;position:absolute;top:95px;left:455px;">
+<img src="sins/imgi.png" id="crosssecimg" style="width:220px;height:100px;position:absolute;top:95px;left:235px;">
+<img src="sins/ssb.png" id="beamimg" style="width:220px;height:100px;position:absolute;top:100px;left:35px;">
+<img src="sins/imggraph.png" id="graphimg" style="width:220px;height:200px;position:absolute;top:218px;left:382px;">
+<p id = "graphimgvalue" style="position:absolute;top:399px;left:450px;font-size:12px;"></p>
+<p style="position:absolute;top:55px;left:260px;z-index:100;background-color:white;padding:10px;font-size:10px;border:1px solid black;" id="crosssecdetail"></p>
+<pre style="position:absolute;top:55px;left:610px;z-index:100;background-color:white;padding:10px;font-size:10px;border:1px solid black;" id="materialdetail">
+  STEEL
+  p=7750 kg/m^3,E=200 GPa
+  ALUMINIUM
+  p=2712 kg/m^3,E=70.33 GPa
+  BRONZE
+  p=8304 kg/m^3,E=111.006 GPa</pre>
+<p style="position:absolute;top:460px;left:200px;font-size:20px;">Simply Supported Beam</p>
+<p style="position:absolute;top:410px;left:350px;font-size:20px;" id="lengthscalingfactor"></p>
+<p style="position:absolute;top:435px;left:350px;font-size:20px;" id="massscalingfactor"></p>
+
+
+<div id="commentboxleft">
+  Cross Section Area <input type="number" id="otherccarea" value=0.01 style="width:100px;"><br>
+  Ixx <input type="number" id="otherixx" style="width:100px;" value=0.01>  
+</div>
+<div id="commentboxright" style="font-size:15px;"></div>
+<div id="vartitle">VARIABLES</div>
+<div id="variables">
+  <label style="width:100px;position:relative;top:20px;left:40px;">Material</label>
+  <br>
+  <select id = "type" style="width:100px;position:relative;top:25px;left:40px;">
+    <option value = "Steel">Steel</option>
+    <option value = "Bronze">Bronze</option>
+    <option value = "Aluminium">Aluminium</option>
+  </select>
+  <br>
+  <label style="width:100px;position:relative;top:40px;left:40px;">Cross Section</label>
+  <br>
+  <select id = "crosssec" style="width:100px;position:relative;top:45px;left:40px;">
+    <option value = "isec">I Section</option>
+    <option value = "tsec">T Section</option>
+    <option value = "csec">C Section</option>
+    <option value = "lsec">L Section</option>
+    <option value = "squaresec">Square Section</option>
+    <option value = "circlesec">Circle Section</option>
+    <option value = "othersec">Other Section</option>
+  </select>
+  <br>
+  <label style="width:100px;position:relative;top:60px;left:10px;font-size:15px;">Length (mm)</label>
+  <input type="number" id = "nlen" style="width:50px;position:relative;top:60px;left:10px;" value="1500">
+  <br>
+  <label style="width:100px;position:relative;top:65px;left:10px;font-size:15px;">Damping Ratio</label>
+  <input type="number" id = "ndratio" style="width:50px;position:relative;top:65px;left:10px;" value="0.07" min="0" max="1" step="0.01">
+  <br>
+  <input type="range" id="sdratio" name="points" min="0" max="1" step="0.01" value="0.07" style="width:160px;position:relative;top:65px;left:10px;">  
+  <br>
+  <label style="width:100px;position:relative;top:65px;left:5px;font-size:15px;">Center Mass (Kg)</label>
+  <input type="number" id = "nemass" style="width:40px;position:relative;top:65px;left:5px;" value="5" min="0" max="200">
+  <br>
+  <input type="range" id="semass" name="points" min="0" max="200" step="5" value="5" style="width:160px;position:relative;top:65px;left:10px;">  
+</div>
+<div id="ctrltitle">CONTROLS</div>
+<div id="controls">
+  <img src="sins/bluefwddulls.png" id="graphbutton" style="position:relative;left:20px;top:10px;cursor:pointer;">    
+</div>
+
+<div id="copyright" title="Developer : Varun Elavia"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
+</div>
+
+<script type="text/javascript" src= "sins/chart.js"></script>
+<script type="text/javascript" src= "sins/sim.js"></script>
+</body>
+</html>

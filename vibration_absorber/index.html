@@ -1,0 +1,64 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Virtual Labs - NITK</title>
+<link rel="stylesheet" href="sins/MOMstyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
+<script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+<body onload="editcss(); startsim(); varinit();">
+<noscript>
+The simulation requires JavaScript to be enabled.
+</noscript>
+<div id="container">
+<div id="simtitle" style="font-size:33px;">DYNAMIC VIBRATOR ABSORBER</div>
+<div style="position:absolute;top:95px;left:25px;" id="graphcanvasid">
+  <canvas id="x1xstscreen" width="350"></canvas>
+  <canvas id="x2xstscreen" width="350"></canvas>
+</div>
+<canvas id="animationscreen" width="300" height="1000" style="position: absolute;top:50px;left: 400px;"></canvas>
+
+<div id="commentboxleft"  style="font-size:15px;"></div>
+<div id="commentboxright" style="font-size:15px;"></div>
+<div id="vartitle">VARIABLES</div>
+<div id="variables">
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">F<sub>0</sub> (N)</label>
+  <input type="number" id = "nfnot" style="width:45px;position:relative;top:15px;left:5px;" value="750" min="500" max="1000" step="50">
+  <br>
+  <input type="range" id="sfnot" name="points" min="500" max="1000" step="50" value="750" style="width:160px;position:relative;top:15px;left:10px;">  
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">&omega; (rad/sec)</label>
+  <input type="number" id = "nomega" style="width:60px;position:relative;top:15px;left:5px;" value="3.16" min="0" max="16" step="0.01">
+  <br>
+  <input type="range" id="somega" name="points" min="0" max="16" step="0.01" value="3.16" style="width:160px;position:relative;top:15px;left:10px;">  
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">K2 (N/m)</label>
+  <input type="number" id = "nk2" style="width:50px;position:relative;top:15px;left:5px;" value="500" min="200" max="1000" step="50">
+  <br>
+  <input type="range" id="sk2" name="points" min="200" max="1000" step="50" value="500" style="width:160px;position:relative;top:15px;left:10px;">  
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">M2 (Kg)</label>
+  <input type="number" id = "nm2" style="width:50px;position:relative;top:15px;left:5px;" value="50" min="10" max="100" step="1">
+  <br>
+  <input type="range" id="sm2" name="points" min="10" max="100" step="1" value="50" style="width:160px;position:relative;top:15px;left:10px;">  
+  <br>
+  <label style="width:100px;position:relative;top:25px;left:10px;font-size:15px;">K1 (N/m)</label>
+  <input type="number" id = "k1" style="width:50px;position:relative;top:25px;left:10px;" value="2500" min="2000" max="5000" step="50">
+  <br>
+  <label style="width:100px;position:relative;top:35px;left:10px;font-size:15px;">M1 (Kg)</label>
+  <input type="number" id = "m1" style="width:50px;position:relative;top:35px;left:10px;" value="250" min="200" max="500" step="10">
+  <br>
+  </div>
+<div id="ctrltitle">CONTROLS</div>
+<div id="controls">
+    <!--<i class="fa fa-toggle-right" id="graphbutton" style="font-size:24px;color:white;background-color:#0000b3;position:relative;left:20px;top:10px;padding:5px;cursor:pointer;border: 2px solid black;"></i>-->    
+</div>
+<div id="copyright" title="Developer : Varun Elavia"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
+</div>
+<script type="text/javascript" src= "sins/chart.js"></script>
+<script type="text/javascript" src= "sins/sim.js"></script>
+</body>
+</html>

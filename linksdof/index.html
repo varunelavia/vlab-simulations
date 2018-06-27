@@ -1,0 +1,56 @@
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Virtual Labs - NITK</title>
+<link rel="stylesheet" href="sins/MOMstyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
+<script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+<body onload="editcss(); startsim(); varinit();">
+<noscript>
+The simulation requires JavaScript to be enabled.
+</noscript>
+<div id="container">
+<div id="simtitle" style="font-size:33px;">LINK</div>
+<p style="position:absolute;top:455px;left:350px;font-size:20px;" id="lengthscalingfactor"></p>
+<div style="width:520px;position:absolute;top:95px;left:30px;" id="graphcanvasid">
+  <canvas id="displacementcurvescreen"width="500" height="300"></canvas>
+</div>
+<div style="width:320px;position:absolute;top:95px;left:0px;" id="animationcanvasid">
+  <img src="sins/represent3.png" style="position: absolute;top: 10px;left: 25px;height: 250px;transform: rotate(deg);  "> 
+  
+</div>
+<canvas id="animationscreen" width="600" height="800" style="position: absolute;top:100px;"></canvas>
+<div id="commentboxleft"></div>
+<div id="commentboxright" style="font-size:15px;"></div>
+<div id="vartitle">VARIABLES</div>
+<div id="variables">
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">K<sub>t</sub> (N/m)</label>
+  <input type="number" id = "kt" style="width:45px;position:relative;top:15px;left:5px;" value="10" step="0.01">
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">Length (m)</label>
+  <input type="number" id = "length" style="width:60px;position:relative;top:15px;left:5px;" value="200" step="0.01">
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">Mass (Kg)</label>
+  <input type="number" id = "mass" style="width:50px;position:relative;top:15px;left:5px;" value="2" step="0.01">
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">K (N/m)</label>
+  <input type="number" id = "stiffness" style="width:60px;position:relative;top:15px;left:10px;" value="40" step="0.01">
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">&theta;<sub>0</sub></label>
+  <input type="number" id = "thetanot" style="width:50px;position:relative;top:15px;left:5px;" value="2" step="0.01">
+  <br>
+  </div>
+<div id="ctrltitle">CONTROLS</div>
+<div id="controls">
+  <img src="sins/bluefwddulls.png" id="graphbutton" style="position:relative;left:20px;top:10px;cursor:pointer;">    
+</div>
+<div id="copyright" title="Developer : Varun Elavia"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
+</div>
+<script type="text/javascript" src= "sins/chart.js"></script>
+<script type="text/javascript" src= "sins/sim.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+
+<title>SOLVE - Virtual Labs</title>
+<link rel="stylesheet" href="sins/MOMstyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
+<script type="text/javascript" src= "sins/MOMscript.js"></script>
+<script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+
+</head>
+<body onload="editcss(); startsim(); varinit();">
+
+<noscript>
+The simulation requires JavaScript to be enabled.
+</noscript>
+
+<div id="container">
+<div id="simtitle" style="font-size:33px;">SINGLE DEGREE OF FREEDOM SYSTEM</div>
+<div style="width:320px;position:absolute;top:250px;left: 25;" id="canvasid">
+  <canvas id="graphscreen"></canvas>
+</div>
+<img src="sins/img1.png" style="width:120px;height:120px;position:absolute;top:95px;left:455px;">
+<img src="sins/imgi.png" id="crosssecimg" style="width:220px;height:100px;position:absolute;top:95px;left:235px;">
+<img src="sins/ssb.png" id="beamimg" style="width:220px;height:100px;position:absolute;top:100px;left:35px;">
+<img src="sins/imggraph.png" id="graphimg" style="width:220px;height:200px;position:absolute;top:218px;left:382px;">
+<p id = "graphimgvalue" style="position:absolute;top:399px;left:450px;font-size:12px;"></p>
+<p style="position:absolute;top:55px;left:260px;z-index:100;background-color:white;padding:10px;font-size:10px;border:1px solid black;" id="crosssecdetail"></p>
+    
+<pre style="position:absolute;top:55px;left:610px;z-index:100;background-color:white;padding:10px;font-size:10px;border:1px solid black;" id="materialdetail">
+  STEEL
+  p=7750 kg/m^3,E=200 GPa
+  ALUMINIUM
+  p=2712 kg/m^3,E=70.33 GPa
+  BRONZE
+  p=8304 kg/m^3,E=111.006 GPa</pre>
+<pre style="position:absolute;top:480px;left:610px;z-index:100;background-color:white;padding:10px;font-size:10px;border:1px solid black;" id="info">
+    Get the values of peak displacements on the displacement v/s time graph
+    and use the equation &delta;=(1/n)*In(x1/xn) 
+    where n is the no. of peaks considered and x is the displacement values 
+    on those peaks. In is the natural logarithmic function.    
+</pre>
+<div id="titleincanvas"></div>
+<div id="datatable1" class="datatable"></div>
+<div id="datatable2" class="datatable"></div>
+<p style="position:absolute;top:460px;left:170px;font-size:20px;">Simply Supported Beam - Free Vibration</p>
+<div id="commentboxleft">
+    Find logarithmic decrement (δ) from displacement v/s time graph.
+</div>
+<div id="commentboxright" style="font-size:15px;">
+    <input type="number" id="answer2">
+    <button id="check2">Check</button>
+</div>
+<div id="vartitle">VARIABLES</div>
+
+<div id="variables">
+  <label style="width:100px;position:relative;top:5px;left:40px;">Material</label>
+  <p id = "type" style="width:100px;position:relative;top:-10px;left:40px;"></p> 
+  <label style="width:100px;position:relative;top:-10px;left:40px;">Cross Section</label>
+  <p id = "crosssec" style="width:150px;position:relative;top:-25px;left:40px;"></p>    
+  <label style="width:100px;position:relative;top:-30px;left:40px;font-size:15px;">Length (mm)</label>
+  <p id = "nlen" style="width:50px;position:relative;top:-40px;left:40px;"></p>
+  <label style="width:100px;position:relative;top:-40px;left:40px;font-size:15px;">Damping Ratio</label>
+  <p id = "ndratio" style="width:50px;position:relative;top:-50px;left:40px;"></p>
+  <label style="width:100px;position:relative;top:-40px;left:40px;font-size:15px;">Center Mass (Kg)</label>
+  <p id = "nemass" style="width:50px;position:relative;top:-50px;left:40px;"></p>
+</div>
+
+<div id="ctrltitle">CONTROLS</div>
+
+<div id="controls">
+  <img src="sins/bluecwdull.png" id="restart" style="position:relative;left:20px;top:10px;cursor:pointer;" > 
+  <img src="sins/quickreficon.png" id="query" style="position:relative;left:10px;top:-10px;cursor:pointer;padding:5px 10px;border:2px solid black;border-radius: 10px;" > 
+  </div>
+
+<div id="copyright" title="Developer : Varun Elavia"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
+</div>
+<script type="text/javascript" src= "sins/chart.js"></script>
+<script type="text/javascript" src= "sins/exp2.js"></script>
+
+</body>
+</html>
