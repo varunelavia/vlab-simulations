@@ -23,12 +23,15 @@ The structure  contains three parts, viz graphs, animation and calculations.
 - It was also contain MOMScript.css file which will contain the styles for the simulation frame.
 - There would be multiple images which has to be kept in the simulation frame.
 - It will also contain images for the buttons for controlling the simulation frame.
+### chart.js file
 - There will be one javascript file named chart.js, this chart.js file will contain  arrays   for animation and graph points, It will also contain one function named *updategraph*.
 - This update graph function will have parameters which will be used to calculate the points of the graph.
 - This *updategraph* function is called each time when the user value changes.
 - When the *updategraph* function is called, it remove all the points from the animation and  graph point arrays, then it will recalculate these points with the new user inputs. This new calculated points are pushed into the animation and graph point arrays and the graph is updated.
 - This *updategraph* function will also have configuration of the graph.
+### sim.js file
 - There will be one file named sim.js, this file will contain all the static variables whose values will be needed in the calculations, this file will contain a function named *display*, This *display* function is called each time when the user input value changes. This function takes the user input values into local variables, by using these variables and performing mathematical operations on them we get the desired output, then the output is displayed into the *div* having id as *commentboxleft* and/or *commentboxright*.
+- This *display* function also call the *updategraph* function with the parameters which are required to plot the graph.
 - This *display* function will also perform the animation.
 - When the *display* function is called it requests an animation frame.
 - There is a function named *drawRectangle* or *drawAnimation*, this function will draw the animation in the canvas by using the variables of an object named *myRectangle*.
@@ -37,3 +40,4 @@ The structure  contains three parts, viz graphs, animation and calculations.
 - This *animate* function will clear the canvas before drawing of the new animation screen, and is set to be called continuously for infinite time.
 - This sim.js file will also contain JavaScript code for the scaling factor which is explain later in this documentation.
 - This sim.js file also handles all the change in the user inputs, This file calls *display* function on the change of any of the user inputs, this file also contains all the mouseover and/or mouseleave event handling functions and work accordingly. This file also handles click event of the controlling buttons, and perform the required actions.
+- This file also control the toggling of animation and graph by performing show and hide operations.
