@@ -43,3 +43,16 @@ The structure  contains three parts, viz graphs, animation and calculations.
 - This file also control the toggling of animation and graph by performing show and hide operations.
 ## Working of scaling factor
 - Let us assume that we want to scale the radius, Let's assume that we can show minimum radius 20 and maximum radius 160, Hence 160 - 20 equals to 140, so the range to display the radius is 140 and now we will use the following piece of code to scale a radius.
+```javascript
+var tempradius = parseInt(radius);
+      var scalingfactor = tempradius/140;
+      var quotient = Math.floor(scalingfactor);
+      var remainder = tempradius - (quotient * 140);
+      remainder = remainder + 20;
+      if(tempradius%140 == 0)
+      {
+          scalingfactor = scalingfactor + 1;
+      }
+      tempradius = remainder;
+      document.getElementById("radiusscalingfactor").innerHTML = "Radius Scaling Factor - 1:"+Math.ceil(scalingfactor);
+```
