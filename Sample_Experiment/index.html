@@ -1,0 +1,49 @@
+<!--Nothing to change from here -->
+<!-- Dont change anything in MOMStyle.css, untill necessary. -->
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Virtual Labs - NITK</title>
+<link rel="stylesheet" href="sins/MOMstyle.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js'></script>
+<script src="http://www.chartjs.org/dist/2.7.2/Chart.bundle.js"></script>
+<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+</head>
+<body onload="editcss(); startsim(); varinit();">
+<noscript>
+The simulation requires JavaScript to be enabled.
+</noscript>
+<div id="container">
+<!-- to here -->
+<div id="simtitle" style="font-size:33px;">Sample</div><!-- Replace with the name of the practical -->
+<p style="position:absolute;top:455px;left:350px;font-size:20px;" id="radiusscalingfactor"></p><!-- Keep Scaling factor over here -->
+<div style="width:520px;position:absolute;top:95px;left:30px;" id="graphcanvasid"><!-- Div for graph -->
+  <canvas id="displacementcurvescreen"width="500" height="300"></canvas>
+</div>
+  <div style="width:320px;position:absolute;top:95px;left:0px;" id="animationcanvasid"><!-- Div for Animation -->
+      <img src="sins/calculator.png" style="position: absolute;top: 00px;left: 10px;height: 150px;transform: rotate(0deg);  "> <!-- Representation Images -->
+      <canvas id="animationscreen" width="600" height="450"></canvas>
+</div>
+<div id="commentboxleft"></div><!-- Output box 1 -->
+<div id="commentboxright" style="font-size:15px;"></div><!-- Output box 2 -->
+<div id="vartitle">VARIABLES</div>
+<div id="variables"><!-- Keep all inputs here -->
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">1<sup>st</sup> value (Digit)</label>
+  <input type="number" id = "n1" style="width:50px;position:relative;top:15px;left:5px;" value="200">
+  <br>
+  <label style="width:100px;position:relative;top:15px;left:5px;font-size:15px;">2<sup>nd</sup> value (Digit)</label>
+  <input type="number" id = "n2" style="width:50px;position:relative;top:15px;left:5px;" value="200">
+  <br>
+  </div>
+<div id="ctrltitle">CONTROLS</div>
+<div id="controls"><!-- Keep all controls here -->
+  <img src="sins/bluefwddulls.png" id="graphbutton" style="position:relative;left:20px;top:10px;cursor:pointer;">  <!-- Button -->
+</div>
+<div id="copyright" title="Developer : Varun Elavia"> Copyright &copy; SOLVE The Virtual Lab @ NITK Surathkal </div>
+</div><!-- Both the js files below are necessary, update them according to your needs. -->
+<script type="text/javascript" src= "sins/chart.js"></script>
+<script type="text/javascript" src= "sins/sim.js"></script>
+</body>
+</html>

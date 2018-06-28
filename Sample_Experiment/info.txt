@@ -1,0 +1,4 @@
+Here, a sample experiment is made for the easy understanding of how its being developed.
+here the outputs are addition, subtraction, multiplication, division and modulo.
+the graph is of y = x^2
+and animation is moving the circle in vertical manner.
