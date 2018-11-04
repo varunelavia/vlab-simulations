@@ -1,3 +1,3 @@
 <?php
-echo "Hello Heroku";
+echo "Hello World";
 ?>
