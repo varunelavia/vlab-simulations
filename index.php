@@ -1,3 +1,3 @@
 <?php
-echo "Virtual Lab Simulations"
+echo "Virtual Lab Simulations by Varun Elavia."
 ?>
