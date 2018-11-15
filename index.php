@@ -6,9 +6,9 @@ echo "Virtual Lab Simulations by Varun Elavia at NIT-K."
 <br>
 <a href="base_excitation">base_excitation</a>
 <br>
-<a href="cantiliver_beam">cantiliver_beam</a>
+<a href="cantiliver_beam/explore.html">cantiliver_beam</a>
 <br>
-<a href="fixed_beam">fixed_beam</a>
+<a href="fixed_beam/explore.html">fixed_beam</a>
 <br>
 <a href="forced_vibration">forced_vibration</a>
 <br>
@@ -22,7 +22,7 @@ echo "Virtual Lab Simulations by Varun Elavia at NIT-K."
 <br>
 <a href="simplependulum">simplependulum</a>
 <br>
-<a href="simply_supported">simply_supported</a>
+<a href="simply_supported/explore.html">simply_supported</a>
 <br>
 <a href="stringsdof">stringsdof</a>
 <br>
