@@ -1,5 +1,5 @@
 <?php
-echo "Virtual Lab Simulations by Varun Elavia for NIT Karnataka."
+echo "Virtual Lab (Vlabs) Simulations by Varun Elavia for NIT Karnataka."
 ?>
 <br><br>
 <a href="2DOFS">2DOFS</a>
